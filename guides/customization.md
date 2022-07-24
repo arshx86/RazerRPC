@@ -14,8 +14,10 @@ You can add timestamps, custom prefixes and logo.
 
 * Transparent
 ![](https://media.discordapp.net/attachments/1000894685004431420/1000903148820512768/unknown.png)
+
 * Glass
 ![](https://media.discordapp.net/attachments/1000894685004431420/1000903493848141895/unknown.png)
+
 * Acrylic
 ![](https://media.discordapp.net/attachments/1000894685004431420/1000903358833500171/unknown.png)
 
