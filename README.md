@@ -1,2 +1,2 @@
 # RazerRPC
-Show your Razer gears on discord!
+Display your Razer equipments in your Discord!
