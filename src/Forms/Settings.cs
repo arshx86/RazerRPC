@@ -34,7 +34,7 @@ namespace RazerRPC.Forms
 
         private void GoBack(object sender, EventArgs e)
         {
-            LoadSettings();
+            SaveSettings();
             Fader.FadeOut(this, 60);
             Hide();
             new Client(null).Show();
