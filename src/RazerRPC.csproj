@@ -99,9 +99,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="Themer">
-      <HintPath>..\..\..\Themer.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\Client.cs">
@@ -123,6 +120,13 @@
     <Compile Include="Util\Fader.cs" />
     <Compile Include="Util\IDLookup.cs" />
     <Compile Include="Util\RazerWrapper.cs" />
+    <Compile Include="Util\Themer\Models\AccentPolicy.cs" />
+    <Compile Include="Util\Themer\Models\AccentState.cs" />
+    <Compile Include="Util\Themer\Models\MARGINS.cs" />
+    <Compile Include="Util\Themer\Models\WindowCompositionAttribute.cs" />
+    <Compile Include="Util\Themer\Models\WindowCompositionAttributeData.cs" />
+    <Compile Include="Util\Themer\Themer.cs" />
+    <Compile Include="Util\Themer\Themes.cs" />
     <Compile Include="Util\Tools.cs" />
     <EmbeddedResource Include="Forms\Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
