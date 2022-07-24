@@ -24,7 +24,7 @@ namespace RazerRPC.Forms
     public partial class Client : Form
     {
         private static ThemerApplier theme_;
-        private static ulong TS_Unix;
+        private static DateTime TS_Unix;
         private static bool IsLoadFinished;
         private static bool IsSilent;
         private static string SelectedAsset = "razer_green";
@@ -43,8 +43,9 @@ namespace RazerRPC.Forms
 
         public Client(string[] args)
         {
+
             theme_ = new ThemerApplier(Handle);
-            theme_.Apply(Properties.Settings.Default.Theme);
+  
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
             if (args?.Length > 0)
@@ -56,7 +57,7 @@ namespace RazerRPC.Forms
                     ShowInTaskbar = false;
                     Task.Factory.StartNew(() =>
                     {
-                        for (;;)
+                        for (; ; )
                         {
                             Task.Delay(500);
                             if (!IsLoadFinished) continue;
@@ -70,6 +71,9 @@ namespace RazerRPC.Forms
         protected override void OnLoad(EventArgs e)
         {
             // CreateLoadingPanel();
+            Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+
             Fader.FadeIn(this, 60);
             if (Process.GetProcessesByName(Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)).Count() > 1)
             {
@@ -169,7 +173,6 @@ namespace RazerRPC.Forms
             status.Text = "Ready";
             tooltip.SetToolTip(status, "RazerRPC is ready, " +
                                        $"{(Properties.Settings.Default.AutoEffect ? "your changes will affected to profile instantly." : "don't forget to save it to take effect. (AutoEffect disabled)")}");
-            CreateLoadingPanel(true);
         }
 
         /// <summary>
@@ -193,6 +196,25 @@ namespace RazerRPC.Forms
         {
             var settings = Properties.Settings.Default;
             /* there are already saved settings */
+            theme_.Apply(Properties.Settings.Default.Theme);
+            if (settings.Theme != Themes.None)
+            {
+                // enhance vision
+                card_panel_container.BackColor = this.BackColor;
+                card_panel_header.BackColor = this.BackColor;
+
+                /* Avoid text cluttering for labels and boxes */
+                foreach (var label in this.Controls.OfType<Guna.UI2.WinForms.Guna2HtmlLabel>())
+                {
+                    label.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
+                }
+                foreach (var box in this.Controls.OfType<Guna.UI2.WinForms.Guna2Button>())
+                {
+                    box.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
+                }
+                
+            }
+
             if (settings.Subtitle != "")
             {
                 card_subtitle.Text = settings.Subtitle;
@@ -249,9 +271,8 @@ namespace RazerRPC.Forms
             if (tsampt.Visible)
                 RPC.WithTimestamps(new Timestamps
                 {
-                    StartUnixMilliseconds = TS_Unix
+                    Start = TS_Unix,
                 });
-
             client.SetPresence(RPC);
             status.Text = "Ready";
         }
@@ -311,7 +332,7 @@ namespace RazerRPC.Forms
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             SaveSettings();
-            Process.GetCurrentProcess().Kill();
+            Fader.FadeOutAndClose(this, 60);
         }
 
         private void Settings_Click(object sender, EventArgs e)
@@ -329,9 +350,10 @@ namespace RazerRPC.Forms
                 Hide();
                 return;
             }
-
+            TopMost = true;
             Focus();
             Show();
+            TopMost = false;
         }
 
         private async void manual_save_Click(object sender, EventArgs e)
@@ -339,7 +361,7 @@ namespace RazerRPC.Forms
             ApplyRPC(false); // pass 'that is manual apply' flag
             manual_save.Text = ":)";
             await Task.Delay(1250);
-            manual_save.Text = "";
+            manual_save.Text = "Save";
         }
 
         /// <summary>
@@ -379,7 +401,7 @@ namespace RazerRPC.Forms
                         new MenuItem("Edit RPC", (s, args) =>
                         {
                             ShowInTaskbar = true;
-                            ShowDialog();
+                            Show();
                             Focus();
                             BringToFront();
                         }),
@@ -405,9 +427,9 @@ namespace RazerRPC.Forms
         {
             await Task.Delay(250);
             SelectedAsset = "razer_white";
-            Tools.Animate(card_pp_panel, Tools.Effect.Roll, 250, 360);
+            Tools.Animate(card_pp_panel, Tools.Effect.Center, 120, 360);
             card_logo.Image = Resources.razer_white_8;
-            Tools.Animate(card_pp_panel, Tools.Effect.Roll, 250, 360);
+            Tools.Animate(card_pp_panel, Tools.Effect.Center, 120, 360);
             ApplyRPC();
         }
 
@@ -415,9 +437,9 @@ namespace RazerRPC.Forms
         {
             await Task.Delay(250);
             SelectedAsset = "razer_green";
-            Tools.Animate(card_pp_panel, Tools.Effect.Roll, 250, 360);
+            Tools.Animate(card_pp_panel, Tools.Effect.Center, 120, 360);
             card_logo.Image = Resources.razer_green_8;
-            Tools.Animate(card_pp_panel, Tools.Effect.Roll, 250, 360);
+            Tools.Animate(card_pp_panel, Tools.Effect.Center, 120, 360);
             ApplyRPC();
         }
 
@@ -425,9 +447,9 @@ namespace RazerRPC.Forms
         {
             await Task.Delay(250);
             SelectedAsset = "razer_gradient";
-            Tools.Animate(card_pp_panel, Tools.Effect.Roll, 250, 360);
+            Tools.Animate(card_pp_panel, Tools.Effect.Center, 120, 360);
             card_logo.Image = Resources.razer_gradient_81;
-            Tools.Animate(card_pp_panel, Tools.Effect.Roll, 250, 360);
+            Tools.Animate(card_pp_panel, Tools.Effect.Center, 120, 360);
             ApplyRPC();
         }
 
@@ -459,7 +481,7 @@ namespace RazerRPC.Forms
         {
             if (tsampt.Visible)
             {
-                TS_Unix = (ulong)new DateTimeOffset(Process.GetCurrentProcess().StartTime).ToUnixTimeMilliseconds();
+                TS_Unix = Process.GetCurrentProcess().StartTime.ToLocalTime();
                 tsampt.Visible = false;
                 SwitchTimestamp.Text = "Enable timestamp";
             }

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace RazerRPC.Util
 {
+    using System.Diagnostics;
+
     /// <summary>
     ///     An object used to control fading forms in and out.
     /// </summary>
@@ -216,7 +218,7 @@ namespace RazerRPC.Util
                 shouldClose = true
             };
             fader.FadeOut(fadeSpeed, null);
-            Task.Delay(250).ContinueWith(t => Environment.Exit(0));
+            Task.Delay(250).ContinueWith(t => Process.GetCurrentProcess().Kill());
         }
 
         /// <summary>

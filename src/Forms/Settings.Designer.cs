@@ -45,6 +45,7 @@
             this.SetAcryclic = new Guna.UI2.WinForms.Guna2Button();
             this.SetGlass = new Guna.UI2.WinForms.Guna2Button();
             this.SetTransparent = new Guna.UI2.WinForms.Guna2Button();
+            this.SetNone = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -54,7 +55,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.SetNone = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -292,6 +292,7 @@
             this.SetAcryclic.Size = new System.Drawing.Size(97, 19);
             this.SetAcryclic.TabIndex = 60;
             this.SetAcryclic.Text = "Acrylic";
+            this.SetAcryclic.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
             this.tooltip.SetToolTip(this.SetAcryclic, "Save settings and go back");
             // 
             // SetGlass
@@ -318,6 +319,7 @@
             this.SetGlass.Size = new System.Drawing.Size(97, 19);
             this.SetGlass.TabIndex = 61;
             this.SetGlass.Text = "Glass";
+            this.SetGlass.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
             this.tooltip.SetToolTip(this.SetGlass, "Save settings and go back");
             // 
             // SetTransparent
@@ -344,7 +346,35 @@
             this.SetTransparent.Size = new System.Drawing.Size(97, 19);
             this.SetTransparent.TabIndex = 62;
             this.SetTransparent.Text = "Transparent";
+            this.SetTransparent.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
             this.tooltip.SetToolTip(this.SetTransparent, "Save settings and go back");
+            // 
+            // SetNone
+            // 
+            this.SetNone.Animated = true;
+            this.SetNone.BackColor = System.Drawing.Color.Transparent;
+            this.SetNone.BorderColor = System.Drawing.Color.Transparent;
+            this.SetNone.BorderRadius = 6;
+            this.SetNone.BorderThickness = 1;
+            this.SetNone.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SetNone.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
+            this.SetNone.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SetNone.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SetNone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SetNone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SetNone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
+            this.SetNone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.SetNone.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.SetNone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SetNone.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.SetNone.Location = new System.Drawing.Point(437, 6);
+            this.SetNone.Name = "SetNone";
+            this.SetNone.PressedDepth = 1;
+            this.SetNone.Size = new System.Drawing.Size(97, 19);
+            this.SetNone.TabIndex = 63;
+            this.SetNone.Text = "None";
+            this.SetNone.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
+            this.tooltip.SetToolTip(this.SetNone, "Save settings and go back");
             // 
             // guna2HtmlLabel3
             // 
@@ -462,32 +492,6 @@
             this.guna2HtmlLabel8.TabIndex = 3;
             this.guna2HtmlLabel8.Text = "Live Effect";
             this.guna2HtmlLabel8.UseSystemCursors = true;
-            // 
-            // SetNone
-            // 
-            this.SetNone.Animated = true;
-            this.SetNone.BackColor = System.Drawing.Color.Transparent;
-            this.SetNone.BorderColor = System.Drawing.Color.Transparent;
-            this.SetNone.BorderRadius = 6;
-            this.SetNone.BorderThickness = 1;
-            this.SetNone.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SetNone.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
-            this.SetNone.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SetNone.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SetNone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SetNone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SetNone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
-            this.SetNone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SetNone.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.SetNone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SetNone.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SetNone.Location = new System.Drawing.Point(437, 6);
-            this.SetNone.Name = "SetNone";
-            this.SetNone.PressedDepth = 1;
-            this.SetNone.Size = new System.Drawing.Size(97, 19);
-            this.SetNone.TabIndex = 63;
-            this.SetNone.Text = "None";
-            this.tooltip.SetToolTip(this.SetNone, "Save settings and go back");
             // 
             // Settings
             // 

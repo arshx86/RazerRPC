@@ -30,22 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Client));
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.card_panel_container = new Guna.UI2.WinForms.Guna2Panel();
             this.tsampt = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.card_desc = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.card_subtitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.card_const_title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.card_pp_panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.card_logo = new System.Windows.Forms.PictureBox();
+            this.card_panel_header = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.nick = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.disc = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.avatar_pp = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.card_pp_panel = new Guna.UI2.WinForms.Guna2Panel();
-            this.card_logo = new System.Windows.Forms.PictureBox();
             this.borderlessf = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.equipmentsBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.subtitleBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Exit = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -66,33 +65,32 @@
             this.tooltip_special = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.card_panel_container.SuspendLayout();
+            this.card_pp_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.card_logo)).BeginInit();
+            this.card_panel_header.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar_pp)).BeginInit();
-            this.card_pp_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.card_logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // card_panel_container
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderRadius = 12;
-            this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.tsampt);
-            this.guna2Panel1.Controls.Add(this.card_desc);
-            this.guna2Panel1.Controls.Add(this.card_subtitle);
-            this.guna2Panel1.Controls.Add(this.card_const_title);
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel5);
-            this.guna2Panel1.Controls.Add(this.guna2Panel2);
-            this.guna2Panel1.Controls.Add(this.card_pp_panel);
-            this.guna2Panel1.Location = new System.Drawing.Point(30, 68);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(200, 231);
-            this.guna2Panel1.TabIndex = 0;
+            this.card_panel_container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.card_panel_container.BorderColor = System.Drawing.Color.Transparent;
+            this.card_panel_container.BorderRadius = 12;
+            this.card_panel_container.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.card_panel_container.BorderThickness = 2;
+            this.card_panel_container.Controls.Add(this.tsampt);
+            this.card_panel_container.Controls.Add(this.card_desc);
+            this.card_panel_container.Controls.Add(this.card_subtitle);
+            this.card_panel_container.Controls.Add(this.card_const_title);
+            this.card_panel_container.Controls.Add(this.guna2HtmlLabel5);
+            this.card_panel_container.Controls.Add(this.card_pp_panel);
+            this.card_panel_container.Location = new System.Drawing.Point(30, 54);
+            this.card_panel_container.Name = "card_panel_container";
+            this.card_panel_container.Size = new System.Drawing.Size(200, 231);
+            this.card_panel_container.TabIndex = 0;
             // 
             // tsampt
             // 
@@ -160,19 +158,38 @@
             this.guna2HtmlLabel5.TabIndex = 7;
             this.guna2HtmlLabel5.Text = "PLAYING A GAME";
             // 
-            // guna2Panel2
+            // card_pp_panel
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(37)))));
-            this.guna2Panel2.BorderRadius = 12;
-            this.guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Panel2.BorderThickness = 2;
-            this.guna2Panel2.Controls.Add(this.guna2Panel7);
-            this.guna2Panel2.Controls.Add(this.guna2Panel4);
-            this.guna2Panel2.Controls.Add(this.avatar_pp);
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(200, 119);
-            this.guna2Panel2.TabIndex = 1;
+            this.card_pp_panel.Controls.Add(this.card_logo);
+            this.card_pp_panel.Location = new System.Drawing.Point(8, 153);
+            this.card_pp_panel.Name = "card_pp_panel";
+            this.card_pp_panel.Size = new System.Drawing.Size(67, 70);
+            this.card_pp_panel.TabIndex = 53;
+            // 
+            // card_logo
+            // 
+            this.card_logo.Image = global::RazerRPC.Properties.Resources.green;
+            this.card_logo.Location = new System.Drawing.Point(1, 2);
+            this.card_logo.Name = "card_logo";
+            this.card_logo.Size = new System.Drawing.Size(65, 68);
+            this.card_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.card_logo.TabIndex = 8;
+            this.card_logo.TabStop = false;
+            this.tooltip_special.SetToolTip(this.card_logo, "RazerRPC");
+            // 
+            // card_panel_header
+            // 
+            this.card_panel_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(37)))));
+            this.card_panel_header.BorderRadius = 12;
+            this.card_panel_header.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.card_panel_header.BorderThickness = 2;
+            this.card_panel_header.Controls.Add(this.guna2Panel7);
+            this.card_panel_header.Controls.Add(this.guna2Panel4);
+            this.card_panel_header.Controls.Add(this.avatar_pp);
+            this.card_panel_header.Location = new System.Drawing.Point(30, 54);
+            this.card_panel_header.Name = "card_panel_header";
+            this.card_panel_header.Size = new System.Drawing.Size(200, 119);
+            this.card_panel_header.TabIndex = 1;
             // 
             // guna2Panel7
             // 
@@ -233,40 +250,11 @@
             this.avatar_pp.TabIndex = 0;
             this.avatar_pp.TabStop = false;
             // 
-            // card_pp_panel
-            // 
-            this.card_pp_panel.Controls.Add(this.card_logo);
-            this.card_pp_panel.Location = new System.Drawing.Point(8, 153);
-            this.card_pp_panel.Name = "card_pp_panel";
-            this.card_pp_panel.Size = new System.Drawing.Size(67, 70);
-            this.card_pp_panel.TabIndex = 53;
-            // 
-            // card_logo
-            // 
-            this.card_logo.Image = global::RazerRPC.Properties.Resources.green;
-            this.card_logo.Location = new System.Drawing.Point(1, 2);
-            this.card_logo.Name = "card_logo";
-            this.card_logo.Size = new System.Drawing.Size(65, 68);
-            this.card_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.card_logo.TabIndex = 8;
-            this.card_logo.TabStop = false;
-            this.tooltip_special.SetToolTip(this.card_logo, "RazerRPC");
-            // 
             // borderlessf
             // 
             this.borderlessf.ContainerControl = this;
             this.borderlessf.DockIndicatorTransparencyValue = 0.6D;
             this.borderlessf.TransparentWhileDrag = true;
-            // 
-            // guna2ShadowPanel1
-            // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(30, 68);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(200, 231);
-            this.guna2ShadowPanel1.TabIndex = 8;
             // 
             // equipmentsBox
             // 
@@ -284,7 +272,7 @@
             this.equipmentsBox.ItemHeight = 25;
             this.equipmentsBox.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.equipmentsBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.equipmentsBox.Location = new System.Drawing.Point(304, 135);
+            this.equipmentsBox.Location = new System.Drawing.Point(304, 164);
             this.equipmentsBox.Name = "equipmentsBox";
             this.equipmentsBox.Size = new System.Drawing.Size(155, 31);
             this.equipmentsBox.TabIndex = 1;
@@ -317,7 +305,7 @@
             "Headset"});
             this.subtitleBox.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.subtitleBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.subtitleBox.Location = new System.Drawing.Point(517, 135);
+            this.subtitleBox.Location = new System.Drawing.Point(517, 164);
             this.subtitleBox.Name = "subtitleBox";
             this.subtitleBox.Size = new System.Drawing.Size(155, 31);
             this.subtitleBox.TabIndex = 4;
@@ -330,10 +318,10 @@
             // 
             this.Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Exit.Animated = true;
-            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
+            this.Exit.BackColor = System.Drawing.Color.Transparent;
             this.Exit.CustomClick = true;
             this.Exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
-            this.Exit.IconColor = System.Drawing.Color.White;
+            this.Exit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Exit.Location = new System.Drawing.Point(643, 12);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(45, 29);
@@ -344,7 +332,7 @@
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox2.Animated = true;
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
@@ -381,7 +369,7 @@
             this.status.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
             this.status.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.status.ForeColor = System.Drawing.Color.White;
-            this.status.Location = new System.Drawing.Point(377, 359);
+            this.status.Location = new System.Drawing.Point(30, 360);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(196, 28);
             this.status.TabIndex = 48;
@@ -411,10 +399,10 @@
             this.addWith.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.addWith.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(45)))));
             this.addWith.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.addWith.ForeColor = System.Drawing.Color.Indigo;
+            this.addWith.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.addWith.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
             this.addWith.ImageSize = new System.Drawing.Size(30, 30);
-            this.addWith.Location = new System.Drawing.Point(354, 185);
+            this.addWith.Location = new System.Drawing.Point(354, 214);
             this.addWith.Name = "addWith";
             this.addWith.PressedDepth = 10;
             this.addWith.Size = new System.Drawing.Size(127, 33);
@@ -441,7 +429,7 @@
             this.SwitchTimestamp.ForeColor = System.Drawing.Color.IndianRed;
             this.SwitchTimestamp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
             this.SwitchTimestamp.ImageSize = new System.Drawing.Size(30, 30);
-            this.SwitchTimestamp.Location = new System.Drawing.Point(487, 185);
+            this.SwitchTimestamp.Location = new System.Drawing.Point(487, 214);
             this.SwitchTimestamp.Name = "SwitchTimestamp";
             this.SwitchTimestamp.PressedDepth = 10;
             this.SwitchTimestamp.Size = new System.Drawing.Size(127, 33);
@@ -463,7 +451,7 @@
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Image = global::RazerRPC.Properties.Resources.outgoing;
             this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button3.Location = new System.Drawing.Point(555, 93);
+            this.guna2Button3.Location = new System.Drawing.Point(555, 122);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(80, 36);
             this.guna2Button3.TabIndex = 58;
@@ -483,9 +471,9 @@
             this.manual_save.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.manual_save.ForeColor = System.Drawing.Color.White;
             this.manual_save.Image = global::RazerRPC.Properties.Resources.save;
-            this.manual_save.Location = new System.Drawing.Point(41, 305);
+            this.manual_save.Location = new System.Drawing.Point(30, 326);
             this.manual_save.Name = "manual_save";
-            this.manual_save.Size = new System.Drawing.Size(170, 28);
+            this.manual_save.Size = new System.Drawing.Size(196, 28);
             this.manual_save.TabIndex = 54;
             this.manual_save.Text = "Save";
             this.tooltip.SetToolTip(this.manual_save, "Save RPC and look at your profile :)");
@@ -512,7 +500,7 @@
             this.lg_gradient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
             this.lg_gradient.Image = global::RazerRPC.Properties.Resources.razer_gradient_81;
             this.lg_gradient.ImageSize = new System.Drawing.Size(30, 30);
-            this.lg_gradient.Location = new System.Drawing.Point(563, 236);
+            this.lg_gradient.Location = new System.Drawing.Point(563, 265);
             this.lg_gradient.Name = "lg_gradient";
             this.lg_gradient.PressedDepth = 10;
             this.lg_gradient.Size = new System.Drawing.Size(104, 33);
@@ -541,7 +529,7 @@
             this.lg_green.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
             this.lg_green.Image = global::RazerRPC.Properties.Resources.razer_green_8;
             this.lg_green.ImageSize = new System.Drawing.Size(30, 30);
-            this.lg_green.Location = new System.Drawing.Point(434, 236);
+            this.lg_green.Location = new System.Drawing.Point(434, 265);
             this.lg_green.Name = "lg_green";
             this.lg_green.PressedDepth = 10;
             this.lg_green.Size = new System.Drawing.Size(104, 33);
@@ -569,7 +557,7 @@
             this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
             this.guna2Button2.Image = global::RazerRPC.Properties.Resources.settings;
             this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button2.Location = new System.Drawing.Point(83, 355);
+            this.guna2Button2.Location = new System.Drawing.Point(457, 355);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button2.PressedDepth = 10;
@@ -599,7 +587,7 @@
             this.lg_white.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
             this.lg_white.Image = ((System.Drawing.Image)(resources.GetObject("lg_white.Image")));
             this.lg_white.ImageSize = new System.Drawing.Size(30, 30);
-            this.lg_white.Location = new System.Drawing.Point(304, 236);
+            this.lg_white.Location = new System.Drawing.Point(304, 265);
             this.lg_white.Name = "lg_white";
             this.lg_white.PressedDepth = 10;
             this.lg_white.Size = new System.Drawing.Size(104, 33);
@@ -627,7 +615,7 @@
             this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
             this.guna2Button1.Image = global::RazerRPC.Properties.Resources.github;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(124, 355);
+            this.guna2Button1.Location = new System.Drawing.Point(498, 355);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button1.PressedDepth = 10;
@@ -650,7 +638,7 @@
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.Image = global::RazerRPC.Properties.Resources.dotdotdot;
             this.guna2Button4.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button4.Location = new System.Drawing.Point(340, 93);
+            this.guna2Button4.Location = new System.Drawing.Point(340, 122);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(80, 36);
             this.guna2Button4.TabIndex = 59;
@@ -698,6 +686,7 @@
             this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.manual_save);
+            this.Controls.Add(this.card_panel_header);
             this.Controls.Add(this.SwitchTimestamp);
             this.Controls.Add(this.addWith);
             this.Controls.Add(this.lg_gradient);
@@ -711,25 +700,26 @@
             this.Controls.Add(this.guna2VProgressBar1);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.Exit);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2ShadowPanel1);
+            this.Controls.Add(this.card_panel_container);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Client";
             this.Load += new System.EventHandler(this.Client_Load);
             this.Shown += new System.EventHandler(this.OnShown);
             this.Resize += new System.EventHandler(this.OnResize);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
+            this.card_panel_container.ResumeLayout(false);
+            this.card_panel_container.PerformLayout();
+            this.card_pp_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.card_logo)).EndInit();
+            this.card_panel_header.ResumeLayout(false);
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avatar_pp)).EndInit();
-            this.card_pp_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.card_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -737,8 +727,8 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel card_panel_container;
+        private Guna.UI2.WinForms.Guna2Panel card_panel_header;
         private Guna.UI2.WinForms.Guna2BorderlessForm borderlessf;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel disc;
@@ -748,7 +738,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel card_desc;
         private Guna.UI2.WinForms.Guna2HtmlLabel card_subtitle;
         private Guna.UI2.WinForms.Guna2HtmlLabel card_const_title;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2ComboBox equipmentsBox;
         private Guna.UI2.WinForms.Guna2Button lg_gradient;
         private Guna.UI2.WinForms.Guna2Button lg_green;
