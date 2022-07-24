@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using Themer.Models;
 
+// https://github.com/arshx86/Themer
 namespace Themer
 {
     /// <summary>
@@ -13,7 +14,7 @@ namespace Themer
         private readonly IntPtr _handle;
 
         /// <summary> Adjustment level of the effect. The larger the number, the more effective of the style. </summary>
-        private const uint adjustmentLevel = 20;
+        private const uint adjustmentLevel = 15;
 
         /// <summary> Color of the effect brush. </summary>
         private const uint backgroundColor = 0x990000; // Default: Dark
