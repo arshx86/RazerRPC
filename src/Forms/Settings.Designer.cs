@@ -44,7 +44,6 @@
             this.ReSettings = new Guna.UI2.WinForms.Guna2Button();
             this.SetAcryclic = new Guna.UI2.WinForms.Guna2Button();
             this.SetGlass = new Guna.UI2.WinForms.Guna2Button();
-            this.SetTransparent = new Guna.UI2.WinForms.Guna2Button();
             this.SetNone = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -73,7 +72,7 @@
             this.guna2ControlBox2.Animated = true;
             this.guna2ControlBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(57)))));
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(57)))));
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox2.Location = new System.Drawing.Point(588, 12);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
@@ -85,7 +84,7 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.Animated = true;
             this.guna2ControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(57)))));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(57)))));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(641, 12);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
@@ -94,12 +93,12 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(35)))));
+            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
             this.guna2Panel3.BorderRadius = 4;
             this.guna2Panel3.Controls.Add(this.startup);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2Panel3.Location = new System.Drawing.Point(29, 125);
+            this.guna2Panel3.Location = new System.Drawing.Point(29, 106);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(194, 152);
             this.guna2Panel3.TabIndex = 54;
@@ -108,7 +107,7 @@
             // 
             this.startup.Animated = true;
             this.startup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
-            this.startup.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(50)))));
+            this.startup.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(63)))));
             this.startup.BorderRadius = 6;
             this.startup.BorderThickness = 1;
             this.startup.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
@@ -117,7 +116,7 @@
             this.startup.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.startup.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.startup.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.startup.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
+            this.startup.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.startup.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.startup.ForeColor = System.Drawing.Color.White;
             this.startup.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
@@ -168,7 +167,7 @@
             // 
             this.rpcon.Animated = true;
             this.rpcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
-            this.rpcon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(50)))));
+            this.rpcon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(63)))));
             this.rpcon.BorderRadius = 6;
             this.rpcon.BorderThickness = 1;
             this.rpcon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
@@ -177,7 +176,7 @@
             this.rpcon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.rpcon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.rpcon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.rpcon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
+            this.rpcon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.rpcon.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.rpcon.ForeColor = System.Drawing.Color.White;
             this.rpcon.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
@@ -193,7 +192,7 @@
             // 
             this.autoeffect.Animated = true;
             this.autoeffect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
-            this.autoeffect.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(50)))));
+            this.autoeffect.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(63)))));
             this.autoeffect.BorderRadius = 6;
             this.autoeffect.BorderThickness = 1;
             this.autoeffect.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
@@ -202,7 +201,7 @@
             this.autoeffect.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.autoeffect.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.autoeffect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.autoeffect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
+            this.autoeffect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.autoeffect.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.autoeffect.ForeColor = System.Drawing.Color.White;
             this.autoeffect.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
@@ -232,7 +231,7 @@
             this.goBack.ForeColor = System.Drawing.Color.LightCoral;
             this.goBack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.goBack.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.goBack.Location = new System.Drawing.Point(191, 348);
+            this.goBack.Location = new System.Drawing.Point(191, 329);
             this.goBack.Name = "goBack";
             this.goBack.PressedDepth = 1;
             this.goBack.Size = new System.Drawing.Size(155, 31);
@@ -259,7 +258,7 @@
             this.ReSettings.ForeColor = System.Drawing.Color.LightCoral;
             this.ReSettings.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ReSettings.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ReSettings.Location = new System.Drawing.Point(352, 348);
+            this.ReSettings.Location = new System.Drawing.Point(352, 329);
             this.ReSettings.Name = "ReSettings";
             this.ReSettings.PressedDepth = 1;
             this.ReSettings.Size = new System.Drawing.Size(155, 31);
@@ -313,7 +312,7 @@
             this.SetGlass.ForeColor = System.Drawing.Color.MediumTurquoise;
             this.SetGlass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.SetGlass.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SetGlass.Location = new System.Drawing.Point(237, 6);
+            this.SetGlass.Location = new System.Drawing.Point(288, 6);
             this.SetGlass.Name = "SetGlass";
             this.SetGlass.PressedDepth = 1;
             this.SetGlass.Size = new System.Drawing.Size(97, 19);
@@ -321,33 +320,6 @@
             this.SetGlass.Text = "Glass";
             this.SetGlass.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
             this.tooltip.SetToolTip(this.SetGlass, "Save settings and go back");
-            // 
-            // SetTransparent
-            // 
-            this.SetTransparent.Animated = true;
-            this.SetTransparent.BackColor = System.Drawing.Color.Transparent;
-            this.SetTransparent.BorderColor = System.Drawing.Color.Transparent;
-            this.SetTransparent.BorderRadius = 6;
-            this.SetTransparent.BorderThickness = 1;
-            this.SetTransparent.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SetTransparent.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
-            this.SetTransparent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SetTransparent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SetTransparent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SetTransparent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SetTransparent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
-            this.SetTransparent.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SetTransparent.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.SetTransparent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SetTransparent.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SetTransparent.Location = new System.Drawing.Point(334, 6);
-            this.SetTransparent.Name = "SetTransparent";
-            this.SetTransparent.PressedDepth = 1;
-            this.SetTransparent.Size = new System.Drawing.Size(97, 19);
-            this.SetTransparent.TabIndex = 62;
-            this.SetTransparent.Text = "Transparent";
-            this.SetTransparent.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
-            this.tooltip.SetToolTip(this.SetTransparent, "Save settings and go back");
             // 
             // SetNone
             // 
@@ -367,7 +339,7 @@
             this.SetNone.ForeColor = System.Drawing.Color.MediumTurquoise;
             this.SetNone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.SetNone.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SetNone.Location = new System.Drawing.Point(437, 6);
+            this.SetNone.Location = new System.Drawing.Point(436, 6);
             this.SetNone.Name = "SetNone";
             this.SetNone.PressedDepth = 1;
             this.SetNone.Size = new System.Drawing.Size(97, 19);
@@ -383,7 +355,7 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel3.IsContextMenuEnabled = false;
             this.guna2HtmlLabel3.IsSelectionEnabled = false;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(309, 56);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(309, 37);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(80, 30);
             this.guna2HtmlLabel3.TabIndex = 30;
@@ -397,7 +369,7 @@
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.DimGray;
             this.guna2HtmlLabel4.IsContextMenuEnabled = false;
             this.guna2HtmlLabel4.IsSelectionEnabled = false;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(239, 92);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(239, 73);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(223, 17);
             this.guna2HtmlLabel4.TabIndex = 30;
@@ -405,12 +377,12 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(35)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
             this.guna2Panel1.BorderRadius = 4;
             this.guna2Panel1.Controls.Add(this.rpcon);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel6);
-            this.guna2Panel1.Location = new System.Drawing.Point(252, 125);
+            this.guna2Panel1.Location = new System.Drawing.Point(252, 106);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(194, 152);
             this.guna2Panel1.TabIndex = 55;
@@ -444,24 +416,23 @@
             // 
             // guna2Panel4
             // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(63)))));
+            this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(60)))));
             this.guna2Panel4.Controls.Add(this.SetNone);
-            this.guna2Panel4.Controls.Add(this.SetTransparent);
             this.guna2Panel4.Controls.Add(this.SetGlass);
             this.guna2Panel4.Controls.Add(this.SetAcryclic);
-            this.guna2Panel4.Location = new System.Drawing.Point(12, 300);
+            this.guna2Panel4.Location = new System.Drawing.Point(12, 281);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(674, 30);
             this.guna2Panel4.TabIndex = 57;
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(35)))));
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
             this.guna2Panel2.BorderRadius = 4;
             this.guna2Panel2.Controls.Add(this.autoeffect);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel7);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel8);
-            this.guna2Panel2.Location = new System.Drawing.Point(475, 125);
+            this.guna2Panel2.Location = new System.Drawing.Point(475, 106);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(194, 152);
             this.guna2Panel2.TabIndex = 56;
@@ -497,7 +468,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(57)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(698, 396);
             this.Controls.Add(this.ReSettings);
             this.Controls.Add(this.guna2Panel2);
@@ -551,7 +522,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2Button ReSettings;
-        private Guna.UI2.WinForms.Guna2Button SetTransparent;
         private Guna.UI2.WinForms.Guna2Button SetGlass;
         private Guna.UI2.WinForms.Guna2Button SetAcryclic;
         private Guna.UI2.WinForms.Guna2Button SetNone;

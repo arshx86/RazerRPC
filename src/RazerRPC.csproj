@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="Consts.cs" />
     <Compile Include="Models\DiscordUser.cs" />
+    <Compile Include="Models\RPOptions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Settings.cs">

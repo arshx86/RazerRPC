@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscordRPC;
 using DiscordRPC.Message;
-using Guna.UI2.WinForms;
 using RazerRPC.Models;
 using RazerRPC.Properties;
 using RazerRPC.Util;
@@ -24,7 +23,6 @@ namespace RazerRPC.Forms
     public partial class Client : Form
     {
         private static ThemerApplier theme_;
-        private static DateTime TS_Unix;
         private static bool IsLoadFinished;
         private static bool IsSilent;
         private static string SelectedAsset = "razer_green";
@@ -39,15 +37,12 @@ namespace RazerRPC.Forms
         /// </summary>
         private readonly Dictionary<string, int> Equipment = new Dictionary<string, int>();
 
-        private Guna2Panel loadingPanel;
-
         public Client(string[] args)
         {
 
-            theme_ = new ThemerApplier(Handle);
-  
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+
             if (args?.Length > 0)
                 /* Silent run enabled */
                 if (args.Any(x => x.Contains("/silent")))
@@ -66,20 +61,25 @@ namespace RazerRPC.Forms
                         }
                     });
                 }
+
+            theme_ = new ThemerApplier(Handle);
         }
 
         protected override void OnLoad(EventArgs e)
         {
-            // CreateLoadingPanel();
+
+            // center
             Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                 (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
 
             Fader.FadeIn(this, 60);
             if (Process.GetProcessesByName(Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)).Count() > 1)
             {
-                // schedule for restart and kill other instances
-                Application.Restart();
-                Process.GetCurrentProcess().Kill();
+                MessageBox.Show("Multiple instances of RazerRPC is running, we'll terminate all. Please re-run it.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                foreach (var proc in Process.GetProcessesByName("razerrpc"))
+                {
+                    proc.Kill();
+                }
             }
 
             LoadSettings();
@@ -101,6 +101,7 @@ namespace RazerRPC.Forms
             // refresh client
             if (client.IsInitialized)
             {
+                client?.ClearPresence();
                 client?.Deinitialize();
                 client?.Dispose();
             }
@@ -170,9 +171,10 @@ namespace RazerRPC.Forms
             avatar_pp.ImageLocation = client.CurrentUser.GetAvatarURL(User.AvatarFormat.PNG, User.AvatarSize.x64);
             nick.Text = client.CurrentUser.Username;
             disc.Text = $"#{user.discriminator}";
-            status.Text = "Ready";
+            status.Text = "Connected";
             tooltip.SetToolTip(status, "RazerRPC is ready, " +
                                        $"{(Properties.Settings.Default.AutoEffect ? "your changes will affected to profile instantly." : "don't forget to save it to take effect. (AutoEffect disabled)")}");
+            manual_save.Enabled = true;
         }
 
         /// <summary>
@@ -208,11 +210,12 @@ namespace RazerRPC.Forms
                 {
                     label.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
                 }
+
                 foreach (var box in this.Controls.OfType<Guna.UI2.WinForms.Guna2Button>())
                 {
                     box.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
                 }
-                
+
             }
 
             if (settings.Subtitle != "")
@@ -245,69 +248,6 @@ namespace RazerRPC.Forms
             {
                 card_desc.Text = "with Razer Products";
             }
-        }
-
-        /// <summary>
-        ///     Applies a new RPC to the selected equipment.
-        /// </summary>
-        /// <param name="IsAutoSave">Whether this method calling from auto save.</param>
-        private void ApplyRPC(bool IsAutoSave = true)
-        {
-            // don't allow live effect when disabled
-            if (!Properties.Settings.Default.AutoEffect && IsAutoSave) return;
-            status.Text = "Applying";
-            var RPC = new RichPresence
-            {
-                Assets = new Assets
-                {
-                    LargeImageKey = SelectedAsset,
-                    LargeImageText = "RazerRPC"
-                },
-                Details = card_subtitle.Text,
-                State = card_desc.Text
-            };
-
-            // enable ts if selected
-            if (tsampt.Visible)
-                RPC.WithTimestamps(new Timestamps
-                {
-                    Start = TS_Unix,
-                });
-            client.SetPresence(RPC);
-            status.Text = "Ready";
-        }
-
-        private void CreateLoadingPanel(bool Dispose = false)
-        {
-            if (Dispose)
-            {
-                Tools.Animate(loadingPanel, Tools.Effect.Blend, 100, 360);
-                Controls.Remove(loadingPanel);
-                loadingPanel?.Dispose();
-                return;
-            }
-
-            // create loading panel from my old code
-            loadingPanel = new Guna2Panel
-            {
-                BackColor = Color.FromArgb(23, 23, 34),
-                Size = new Size(Width, Height),
-                Anchor = AnchorStyles.None
-            };
-
-            /* actual panel */
-            var loadingPic = new Guna2PictureBox
-            {
-                ImageLocation = "https://i.imgur.com/XGn4tdL.gif",
-                SizeMode = PictureBoxSizeMode.CenterImage,
-                Size = new Size(Width, Height),
-                Location = new Point(ClientSize.Width / 2 - Size.Width / 2, ClientSize.Height / 2 - Size.Height / 2)
-            };
-
-            loadingPanel.Controls.Add(loadingPic);
-            Controls.Add(loadingPanel);
-            loadingPanel.BringToFront();
-            loadingPanel.BringToFront();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -350,6 +290,7 @@ namespace RazerRPC.Forms
                 Hide();
                 return;
             }
+
             TopMost = true;
             Focus();
             Show();
@@ -479,17 +420,16 @@ namespace RazerRPC.Forms
 
         private void SwitchTimestamp_Click(object sender, EventArgs e)
         {
-            if (tsampt.Visible)
-            {
-                TS_Unix = Process.GetCurrentProcess().StartTime.ToLocalTime();
-                tsampt.Visible = false;
-                SwitchTimestamp.Text = "Enable timestamp";
-            }
-            else
+            if (!tsampt.Visible)
             {
                 tsampt.Visible = true;
                 tsampt.Text = "For X minutes";
                 SwitchTimestamp.Text = "Disable Timestamp";
+            }
+            else
+            {
+                tsampt.Visible = false;
+                SwitchTimestamp.Text = "Enable timestamp";
             }
 
             ApplyRPC();
@@ -510,7 +450,37 @@ namespace RazerRPC.Forms
 
             ApplyRPC();
         }
-    }
 
-    #endregion
+        #endregion
+
+        /// <summary>
+        ///     Applies a new RPC to the selected equipment.
+        /// </summary>
+        /// <param name="IsAutoSave">Whether this method calling from auto save.</param>
+        private void ApplyRPC(bool IsAutoSave = true)
+        {
+            // don't allow live effect when disabled
+            if (!Properties.Settings.Default.AutoEffect && IsAutoSave) return;
+            status.Text = "Applying";
+            var RPC = new RichPresence
+            {
+                Assets = new Assets
+                {
+                    LargeImageKey = SelectedAsset,
+                    LargeImageText = "RazerRPC"
+                },
+                Details = card_subtitle.Text,
+                State = card_desc.Text
+            };
+
+            // enable ts if selected
+            if (tsampt.Visible)
+                RPC.WithTimestamps(Timestamps.Now);
+
+            client.SetPresence(RPC);
+            status.Text = "Applied";
+        }
+
+
+    }
 }

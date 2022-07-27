@@ -4,6 +4,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.IO;
 
 #endregion
 
@@ -77,6 +78,8 @@ namespace RazerRPC.Util
 
             if (enable) rk?.SetValue("RazerRPC", $"{Application.ExecutablePath} /silent");
             else rk?.DeleteValue("RazerRPC", false);
+            rk?.Close();
         }
+
     }
 }

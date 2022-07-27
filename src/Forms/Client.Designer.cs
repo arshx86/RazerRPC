@@ -104,6 +104,7 @@
             this.tsampt.Size = new System.Drawing.Size(58, 15);
             this.tsampt.TabIndex = 54;
             this.tsampt.Text = "Timestamp";
+            this.tsampt.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.tsampt.Visible = false;
             // 
             // card_desc
@@ -118,6 +119,7 @@
             this.card_desc.Size = new System.Drawing.Size(56, 15);
             this.card_desc.TabIndex = 10;
             this.card_desc.Text = "Viper Mini";
+            this.card_desc.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // card_subtitle
             // 
@@ -131,6 +133,7 @@
             this.card_subtitle.Size = new System.Drawing.Size(38, 15);
             this.card_subtitle.TabIndex = 5;
             this.card_subtitle.Text = "Mouse";
+            this.card_subtitle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // card_const_title
             // 
@@ -144,6 +147,7 @@
             this.card_const_title.Size = new System.Drawing.Size(36, 19);
             this.card_const_title.TabIndex = 9;
             this.card_const_title.Text = "Razer";
+            this.card_const_title.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // guna2HtmlLabel5
             // 
@@ -212,7 +216,7 @@
             this.nick.Name = "nick";
             this.nick.Size = new System.Drawing.Size(88, 22);
             this.nick.TabIndex = 5;
-            this.nick.Text = "arsh";
+            this.nick.Text = "null";
             this.nick.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.tooltip.SetToolTip(this.nick, "oh, it\'s you");
             // 
@@ -237,7 +241,7 @@
             this.disc.Name = "disc";
             this.disc.Size = new System.Drawing.Size(106, 22);
             this.disc.TabIndex = 6;
-            this.disc.Text = "#0064";
+            this.disc.Text = "#0000";
             this.disc.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // avatar_pp
@@ -369,7 +373,7 @@
             this.status.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
             this.status.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.status.ForeColor = System.Drawing.Color.White;
-            this.status.Location = new System.Drawing.Point(30, 360);
+            this.status.Location = new System.Drawing.Point(30, 291);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(196, 28);
             this.status.TabIndex = 48;
@@ -463,15 +467,13 @@
             this.manual_save.BorderColor = System.Drawing.Color.Transparent;
             this.manual_save.BorderRadius = 9;
             this.manual_save.BorderThickness = 1;
-            this.manual_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.manual_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.manual_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.manual_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.manual_save.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.manual_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(35)))));
+            this.manual_save.Enabled = false;
             this.manual_save.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(35)))));
             this.manual_save.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.manual_save.ForeColor = System.Drawing.Color.White;
-            this.manual_save.Image = global::RazerRPC.Properties.Resources.save;
-            this.manual_save.Location = new System.Drawing.Point(30, 326);
+            this.manual_save.Location = new System.Drawing.Point(30, 325);
             this.manual_save.Name = "manual_save";
             this.manual_save.Size = new System.Drawing.Size(196, 28);
             this.manual_save.TabIndex = 54;
@@ -557,7 +559,7 @@
             this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
             this.guna2Button2.Image = global::RazerRPC.Properties.Resources.settings;
             this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button2.Location = new System.Drawing.Point(457, 355);
+            this.guna2Button2.Location = new System.Drawing.Point(92, 360);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button2.PressedDepth = 10;
@@ -615,7 +617,7 @@
             this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(75)))));
             this.guna2Button1.Image = global::RazerRPC.Properties.Resources.github;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(498, 355);
+            this.guna2Button1.Location = new System.Drawing.Point(133, 360);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button1.PressedDepth = 10;
