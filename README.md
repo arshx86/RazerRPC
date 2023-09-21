@@ -1,6 +1,9 @@
 ## RazerRPC
 Bring your razer gears on discord.
 
+## Notice
+As all applications removed from my discord account, it needs to application update for RPC details. If you know how to do it, do and create pr.
+
 **RazerRPC** is a discord RPC client to show your razer **equipments** in your profile.
 
 ![](https://cdn.discordapp.com/attachments/1000894685004431420/1000894796988174436/unknown.png)
